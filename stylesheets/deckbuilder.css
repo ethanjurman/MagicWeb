@@ -1,0 +1,55 @@
+input {
+  text-align: center;
+}
+img {
+  cursor: pointer;
+}
+#enhance-view {
+  width:276;
+  height:391;
+  float: left;
+}
+#enhance-card {
+  overflow:hidden;
+}
+#enhance-card img {
+  width:100%;
+  height:100%;
+}
+#deck {
+  width:calc(100% - 276px);
+  float: left;
+}
+#deck-bar {
+  height:18px;
+}
+#deck-cards {
+  height:355px;
+  overflow: scroll;
+}
+#deck-stats {
+  height:18px;
+}
+#search {
+  float: left;
+  text-align:center;
+  width:276;
+  height:calc(100% - 391px);
+}
+#search-results {
+  float: left;
+  width:calc(100% - 276px);
+  height:calc(100% - 391px);
+  overflow: scroll;
+}
+
+.search-img {
+  width: calc(20% - 4px);
+  max-width: 160px;
+  padding: 2px;
+}
+.deck-img {
+  width: calc(15% - 4px);
+  max-width: 130px;
+  padding: 2px;
+}

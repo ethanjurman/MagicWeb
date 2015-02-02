@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>
+      Deckbuilder - MagicWeb
+    </title>
+    <link rel="stylesheet" href="stylesheets/deckbuilder.css">
+    <script src="javascripts/deckbuilder.js"></script>
+  </head>
+  <body style="margin:0px;">
+    <div id="enhance-view">
+      <div id="enhance-card">
+        <div id="enchance-name"></div>
+      </div>
+    </div>
+    <div id="deck">
+      <div id="deck-bar">
+      </div>
+      <div id="deck-cards"></div>
+      <div id="deck-stats"></div>
+    </div>
+    <div id="search">
+      <input id="search-name" placeholder="Search" onkeydown="if (event.keyCode == 13) search(this.value)"/>
+      <div id="filters">
+        <input id="duplicates" type="checkbox"/> Remove Duplicates
+      </div>
+    </div>
+    <div id="search-results"></div>
+  </body>
+</html>

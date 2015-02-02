@@ -1,0 +1,53 @@
+input {
+  text-align: center;
+}
+img {
+  cursor: pointer;
+}
+#enhance-view {
+  width:276px;
+  height:391px;
+  float: left;
+}
+#enhance-card {
+  overflow:hidden;
+}
+#enhance-card img {
+  width:100%;
+  height:100%;
+}
+#playing-field {
+  width:calc(100% - 276px);
+  height:391px;
+  float: left;
+}
+#chat {
+  float: left;
+  text-align:center;
+  width:276px;
+  height:calc(100% - 391px);
+}
+#chat-input {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width:276px;
+}
+#hand {
+  float: left;
+  width:calc(100% - 276px);
+  height:calc(100% - 391px);
+}
+.dragme{
+  position:relative;
+}
+.hand-card {
+  width: calc(14.28% - 4px);
+  max-width: 100px;
+  padding: 2px;
+}
+.deck-img {
+  width: calc(15% - 4px);
+  max-width: 130px;
+  padding: 2px;
+}
