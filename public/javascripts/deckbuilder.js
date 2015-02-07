@@ -32,7 +32,7 @@ function searchFilter(cards){
 
 function makeCardImage(id,classes){
   // classes must be a list
-  if (classes != "" + classes){
+  if (classes == "" + classes){
     classes = [classes];
   }
   // make image and return it

@@ -21,7 +21,12 @@ img {
   height:391px;
   float: left;
 }
+#messages {
+  overflow-y: scroll;
+  height:calc(100% - 21px);
+}
 #chat {
+  background: darkseagreen;
   float: left;
   text-align:center;
   width:276px;
@@ -38,6 +43,10 @@ img {
   width:calc(100% - 276px);
   height:calc(100% - 391px);
 }
+#actions {
+  position: fixed;
+  bottom: 0px;
+}
 .dragme{
   position:relative;
 }
@@ -50,4 +59,11 @@ img {
   width: calc(15% - 4px);
   max-width: 130px;
   padding: 2px;
+}
+
+.message {
+  display: block;
+}
+.message:nth-child(odd) {
+  background: #eee;
 }

@@ -1,27 +1,3 @@
-var players = [];
-
-// PLAYER STUFF
-function Player (id, deck) {
-  this.id = id;
-  this.deck = deck;
-  this.hand = [];
-  this.graveyard = [];
-  this.exile = [];
-}
-
-Player.prototype.draw = function(drawSize){
-  var drawSize = drawSize || 1;
-  while(drawSize-- > 0){
-    var cardId = this.deck.pop();
-    this.hand.push(cardId);
-    addCardToHand(cardId);
-  }
-}
-
-Player.prototype.shuffle = function(){
-  this.deck = shuffleArray(this.deck);
-}
-
 // IMAGE STUFF
 function addCardToHand(cardId){
   document.getElementById("hand").appendChild(makeCardImage(cardId,["hand-card"]));
@@ -58,4 +34,28 @@ function shuffleArray(array) {
         array[j] = temp;
     }
     return array;
+}
+
+function chat(message){
+  var socket = io();
+  socket.emit('chat message', message);
+  document.getElementById("chat-input").value = "";
+}
+
+function draw(){
+  console.log("GONNA DRAW");
+  var socket = io();
+  socket.emit('draw',1);
+}
+
+window.onload = function(){
+  var socket = io();
+  socket.on('chat message', function(msg){
+    var m = document.createElement("span");
+    var messages = document.getElementById("messages");
+    m.setAttribute("class","message");
+    m.innerHTML = msg;
+    messages.appendChild(m); // append message
+    messages.scrollTop = messages.scrollHeight; // scroll to the bottom
+  });
 }
